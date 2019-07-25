@@ -78,4 +78,4 @@ def sudoku_solver(arr):
             pos -= 1
     return [piece.value for piece in sudoku]
 
-eel.start("main.html")
+eel.start("main.html", size=(490, 640))
