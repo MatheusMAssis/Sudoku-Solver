@@ -17,7 +17,7 @@ input {
         text-align: center;
         width: 48px;
         height: 48px;
-        font-size: 24px;
+        font-size: 20px;
         background-color: #FFFFFF;
         outline: none;
 }
@@ -62,13 +62,18 @@ input:disabled {
 #cell-78, #cell-79, #cell-80 { border-bottom: 2px solid #000000; }
 #cell-60, #cell-69, #cell-78 { border-left:   2px solid #000000; }
 
+.container {
+        font-family: 'Poppins', sans-serif;
+}
 
 .container h1 {
-	margin-left: 72px;
+        margin-left: 72px;
+        font-weight: bold;
 }
 
 .solver {
         margin-top: 24px;
         margin-left: 168px;
         font-size: 2em;
+        font-weight: bold;
 }
