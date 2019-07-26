@@ -13,6 +13,15 @@ function getValues() {
     return finalValues;
 }
 
+function restartGame() {
+    var inputs = document.getElementsByTagName("input");
+    for (var i = 0; i < inputs.length; i++) {
+        inputs[i].value = "";
+        inputs[i].style.color = "black";
+        inputs[i].disabled = false;
+    }
+}
+
 function fixArray(arr) {
     var finalArr = [];
     for (var i = 0; i < arr.length; i++) {

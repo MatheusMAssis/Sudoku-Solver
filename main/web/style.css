@@ -71,9 +71,16 @@ input:disabled {
         font-weight: bold;
 }
 
-.solver {
+.container .solver {
         margin-top: 24px;
-        margin-left: 168px;
+        margin-left: 136px;
+        font-size: 2em;
+        font-weight: bold;
+}
+
+.container .restart {
+        margin-top: 24px;
+        margin-left: 196px;
         font-size: 2em;
         font-weight: bold;
 }
