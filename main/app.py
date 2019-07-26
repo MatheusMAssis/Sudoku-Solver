@@ -1,7 +1,22 @@
 import eel
-import numpy as np
+import numpy  as np
+import pandas as pd
+import random as rd
 
 eel.init("web")
+sudoku_csv = pd.read_csv("files/sudoku.csv")
+
+@eel.expose
+def generate_sudoku():
+    gen_sudoku    = []
+    random_sudoku = rd.randint(0, 1000000)
+    chosen_sudoku = sudoku_csv.iloc[random_sudoku]['quizzes']
+    for i in range(len(chosen_sudoku)):
+        if chosen_sudoku[i] == "0":
+            gen_sudoku.append("")
+        else:
+            gen_sudoku.append(chosen_sudoku[i])
+    return gen_sudoku
 
 @eel.expose
 def define_fixed_pieces(init_sudoku):
@@ -77,5 +92,9 @@ def sudoku_solver(arr):
             sudoku_change[pos].value = 0
             pos -= 1
     return [piece.value for piece in sudoku]
+
+sudoku_board = generate_sudoku()
+
+eel.defineSudoku(sudoku_board)()
 
 eel.start("main.html", size=(490, 640))
