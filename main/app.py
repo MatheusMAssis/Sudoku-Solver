@@ -9,7 +9,7 @@ sudoku_csv = pd.read_csv("files/sudoku.csv")
 @eel.expose
 def generate_sudoku():
     gen_sudoku    = []
-    random_sudoku = rd.randint(0, 1000000)
+    random_sudoku = rd.randint(0, 40000)
     chosen_sudoku = sudoku_csv.iloc[random_sudoku]['quizzes']
     for i in range(len(chosen_sudoku)):
         if chosen_sudoku[i] == "0":
