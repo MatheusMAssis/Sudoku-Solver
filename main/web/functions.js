@@ -1,4 +1,3 @@
- 
 eel.expose(getValues);
 function getValues() {
     var values = [];
@@ -13,13 +12,27 @@ function getValues() {
     return finalValues;
 }
 
-function restartGame() {
+eel.expose(defineSudoku);
+function defineSudoku(arr) {
+    var inputs = document.getElementsByTagName("input");
+    for (var i = 0; i < inputs.length; i++) {
+        inputs[i].value    = arr[i];
+        if (arr[i] != "") {
+            inputs[i].disabled = true;
+        }
+    }
+}
+
+
+async function restartGame() {
     var inputs = document.getElementsByTagName("input");
     for (var i = 0; i < inputs.length; i++) {
         inputs[i].value = "";
         inputs[i].style.color = "black";
         inputs[i].disabled = false;
     }
+    var sudokuBoard = await eel.generate_sudoku()()
+    defineSudoku(sudokuBoard);
 }
 
 function fixArray(arr) {
@@ -30,9 +43,8 @@ function fixArray(arr) {
         } else {
             finalArr[i] = parseInt(arr[i]);
         }
-}
-
-return finalArr;
+    }
+    return finalArr;
 }
 
 async function getButtonClick() {
