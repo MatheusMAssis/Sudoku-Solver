@@ -98,5 +98,3 @@ sudoku_board = generate_sudoku()
 eel.defineSudoku(sudoku_board)()
 
 eel.start("main.html", size=(490, 640))
-
-#heyo
