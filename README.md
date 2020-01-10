@@ -12,7 +12,7 @@ Using the Backtracking Algorithm (also known as Brute Force), I could find solut
 
 ## Built With
 
-* [Python](https://www.python.org/) - Programming Language used.
+* [Python](https://www.python.org/) - Programming Language used (I also used JavaScript, HTML and CSS).
 * [Eel](https://github.com/ChrisKnott/Eel) - Main library used on this project
 * [Sudoku Database](https://www.kaggle.com/bryanpark/sudoku)
 * [Algorithm](https://en.wikipedia.org/wiki/Sudoku_solving_algorithms) - Where I found Algorithms to solve my sudoku
