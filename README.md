@@ -1,6 +1,10 @@
 # Sudoku-Solver
 
-GUI Interface receives your sudoku of choice or chooses one for you and find it's solution.
+### Random Sudoku Initial State and Solved
+![Alt Text](/SudokuResults/SudokuInitial.png)
+![Alt Text](/SudokuResults/SudokuFinal.png)
+
+GUI Interface with a random Sudoku being generated and with two buttons: one for solving it, and one for restarting the Sudoku and generate a new one.
 
 ## About
 
